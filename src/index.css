@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Noto Sans Arabic", sans-serif;
+  
+  --color-brand-primary: #0a0e1a; /* Dark blue/black */
+  --color-brand-accent: #c5a059;  /* Gold */
+  --color-brand-gold-light: #e6d5b8;
+  --color-brand-gold-dark: #a38446;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-primary text-white font-sans;
+    direction: rtl;
+  }
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c5a059 0%, #a38446 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #e6d5b8 0%, #c5a059 50%, #a38446 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a38446;
+}
